@@ -2,4 +2,4 @@ import { View, StyleSheet, Text, TextInput, TouchableOpacity } from "react-nativ
 import { useState, useEffect } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage"
 
-export default function Add() {}
+export default function Home() {}
