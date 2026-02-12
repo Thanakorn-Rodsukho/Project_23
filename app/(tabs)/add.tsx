@@ -52,7 +52,7 @@ export default function Add() {
                     onChangeText={setHighlight}
                 />
                 <TouchableOpacity style={myStyle.box} onPress={() => addBird()}>
-                    <Text>บันทึก</Text>
+                    <Text style={myStyle.t}>บันทึก</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -86,5 +86,8 @@ const myStyle = StyleSheet.create({
         backgroundColor: "green",
         borderRadius: 5,
         margin: 5
+    },
+    t: {
+        textAlign: "center"
     }
 })
