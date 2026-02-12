@@ -46,7 +46,7 @@ export default function Add() {
                     value={BirdName}
                     onChangeText={setBirdName}
                 />
-                <Text>จุดเด่น</Text>
+                <Text>ลักษณะเด่น</Text>
                 <TextInput style={myStyle.input}
                     value={Highlight}
                     onChangeText={setHighlight}
@@ -70,14 +70,14 @@ const myStyle = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: ""
+        backgroundColor: "lightgreen"
     },
     card: {
         justifyContent: "center",
         alignItems: "center",
         width: "80%",
-        backgroundColor: "",
-        borderRadius: 15,
+        backgroundColor: "white",
+        borderRadius: 20,
     },
     box: {
         justifyContent: "center",

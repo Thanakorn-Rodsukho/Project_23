@@ -27,9 +27,35 @@ export default function List() {
         setallBird(newBird)
     }
     return (
-        <View>
+        <View style={myList.bc}>
             <View>
+                <FlatList
+                    contentContainerStyle={{gap:5}}
+                    data={allBird}
+                    keyExtractor={(item) => item.id.toString()}
+                    renderItem={({ item }) => (
+                        <View style={myList.container}>
+                            <Text>รหัส : {item.id}</Text>
+                            <Text>ชื่อ : {item.name}</Text>
+                            <Text>ลักษณะเด่น : {item.highlight}</Text>
+                            <TouchableOpacity onPress={() => removeBird(item.id)}>
+                                <Text style={{ color: "red" }}>ลบ</Text>
+                            </TouchableOpacity>
+                        </View>
+                    )}
+                />
             </View>
         </View>
     )
 }
+
+const myList = StyleSheet.create({
+    container: {
+        margin: 5,
+        padding: 5,
+        backgroundColor: "#A7C7E7"
+    },
+    bc: {
+        margin: 5
+    }
+})
