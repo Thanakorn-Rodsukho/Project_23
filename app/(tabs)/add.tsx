@@ -41,6 +41,10 @@ export default function Add() {
     return (
         <View style={myStyle.container}>
             <View style={myStyle.card}>
+                <Image
+                    source={{ uri: "https://stardewvalleywiki.com/mediawiki/images/0/08/Shane_and_Charlie.png" }}
+                    style={{ width: 100, height: 100 }}
+                />
                 <Text>ชื่อนก</Text>
                 <TextInput style={myStyle.input}
                     value={BirdName}
