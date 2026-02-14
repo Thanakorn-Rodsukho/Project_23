@@ -12,10 +12,6 @@ export default function Layout() {
                     headerTitleAlign: "center",
                     tabBarActiveTintColor: "#000000",
 
-                    tabBarStyle: {
-                        backgroundColor: "#0096FF",
-                    },
-
                     tabBarIcon: () => (
                         <Ionicons name="home" size={20} color="black" />
                     )
@@ -29,10 +25,6 @@ export default function Layout() {
                     headerTitleAlign: "center",
                     tabBarActiveTintColor: "#000000",
 
-                    tabBarStyle: {
-                        backgroundColor: "#0096FF",
-                    },
-
                     tabBarIcon: () => (
                         <Ionicons name="list" size={20} color="black" />
                     )
@@ -45,10 +37,6 @@ export default function Layout() {
                     title: "เพิ่ม",
                     headerTitleAlign: "center",
                     tabBarActiveTintColor: "#000000",
-
-                    tabBarStyle: {
-                        backgroundColor: "#0096FF",
-                    },
 
                     tabBarIcon: () => (
                         <Ionicons name="add" size={20} color="black" />

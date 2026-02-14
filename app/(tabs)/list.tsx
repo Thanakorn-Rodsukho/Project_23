@@ -1,4 +1,4 @@
-import { View, StyleSheet, FlatList, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, StyleSheet, FlatList, Text, TouchableOpacity } from "react-native";
 import { useState, useEffect } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage"
 
@@ -29,8 +29,9 @@ export default function List() {
     return (
         <View style={myList.bc}>
             <View>
+                <Text style={myList.textTitle}>รายการรวมชื่อและลักษณะเด่นของนก 🦤</Text>
                 <FlatList
-                    contentContainerStyle={{gap:5}}
+                    contentContainerStyle={{ gap: 5 }}
                     data={allBird}
                     keyExtractor={(item) => item.id.toString()}
                     renderItem={({ item }) => (
@@ -53,9 +54,18 @@ const myList = StyleSheet.create({
     container: {
         margin: 5,
         padding: 5,
-        backgroundColor: "#A7C7E7"
+        backgroundColor: "lightgreen"
     },
     bc: {
         margin: 5
+        
+    },
+    bc2: {
+        backgroundColor: "lightgreen"
+    },
+    textTitle: {
+        textAlign: "center",
+        fontSize: 20,
+        fontWeight: 200
     }
 })

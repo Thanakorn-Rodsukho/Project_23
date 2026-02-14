@@ -2,7 +2,8 @@ import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
 import { useRouter } from "expo-router";
 
 export default function App() {
-    const router = useRouter
+
+    const router = useRouter()
 
     return (
         <View style={myHome.container}>
@@ -17,11 +18,11 @@ export default function App() {
                     source={{ uri: "https://static.wikia.nocookie.net/houkai-star-rail/images/d/d7/NPC_Owlbert.png/revision/latest?cb=20250805041455" }}
                     style={{ width: 100, height: 100 }}
                 />
-                <TouchableOpacity style={myHome.box} onPress=>{() => router.navigate('/list')}
-                    <Text>ไปยังหน้ารายการ</Text>
+                <TouchableOpacity style={myHome.box} onPress={() => router.navigate('/list')}>
+                    <Text style={myHome.t}>ไปยังหน้ารายการ</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={myHome.box} onPress=>{() => router.navigate('/add')}
-                    <Text>ไปยังหน้าเพิ่มรายการ</Text>
+                <TouchableOpacity style={myHome.box} onPress={() => router.navigate('/add')}>
+                    <Text style={myHome.t}>ไปยังหน้าเพิ่มรายการ</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -37,13 +38,13 @@ const myHome = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "lightgreen",
-        gap: 10
+        backgroundColor: "lightgreen"
     },
     card: {
         justifyContent: "center",
         alignItems: "center",
         width: "80%",
+        height: 250,
         backgroundColor: "white",
         borderRadius: 20
     },
@@ -53,9 +54,10 @@ const myHome = StyleSheet.create({
         height: 30,
         backgroundColor: "green",
         borderRadius: 5,
-        margin: 5
+        margin: 3
     },
     t: {
-        textAlign: "center"
+        textAlign: "center",
+        
     }
 })
